@@ -21,10 +21,8 @@ const getTimeUntilUnlock = (lastDoneTime) => {
 };
 
 const ProgressTracker = () => {
-    const [tasks, setTasks] = useState(() => {
-        const savedTasks = localStorage.getItem('dailyTasks');
-        return savedTasks ? JSON.parse(savedTasks) : initialTasks;
-    });
+    // **Always initialize tasks from initialTasks, no localStorage loading**
+    const [tasks, setTasks] = useState(initialTasks);
 
     const [progress, setProgress] = useState(() => {
         const savedProgress = localStorage.getItem('sixMonthProgress');
@@ -44,9 +42,10 @@ const ProgressTracker = () => {
     const [isLocked, setIsLocked] = useState(false);
     const [unlockTimer, setUnlockTimer] = useState(null);
 
-    useEffect(() => {
-        localStorage.setItem('dailyTasks', JSON.stringify(tasks));
-    }, [tasks]);
+    // **REMOVED this effect so tasks no longer save to localStorage**
+    // useEffect(() => {
+    //     localStorage.setItem('dailyTasks', JSON.stringify(tasks));
+    // }, [tasks]);
 
     useEffect(() => {
         localStorage.setItem('sixMonthProgress', progress.toFixed(2));
@@ -130,7 +129,6 @@ const ProgressTracker = () => {
     //     setIsLocked(false);
     //     setUnlockTimer(0);
     //     // Clear localStorage keys
-    //     localStorage.removeItem('dailyTasks');
     //     localStorage.removeItem('sixMonthProgress');
     //     localStorage.removeItem('lastDoneTime');
     //     localStorage.removeItem('dayCount');
