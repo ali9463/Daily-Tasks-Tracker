@@ -9,8 +9,8 @@ const initialTasks = [
     { id: 1, text: "Web Dev Week 1 work", color: "border-blue-500 bg-blue-50", isChecked: false },
     { id: 2, text: "Internship BizLink", color: "border-red-500 bg-red-50", isChecked: false },
     { id: 3, text: "Uni Subjects", color: "border-green-500 bg-green-50", isChecked: false },
-    // { id: 4, text: "FYP Features", color: "border-yellow-500 bg-yellow-50", isChecked: false },
-    // { id: 5, text: "Plan Tomorrow's Tasks", color: "border-purple-500 bg-purple-50", isChecked: false },
+    { id: 4, text: "FYP Features", color: "border-yellow-500 bg-yellow-50", isChecked: false },
+    { id: 5, text: "News Web Task", color: "border-purple-500 bg-purple-50", isChecked: false },
 ];
 
 // Helper function to calculate time until unlock
