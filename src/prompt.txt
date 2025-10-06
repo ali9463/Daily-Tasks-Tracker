@@ -1,0 +1,55 @@
+Build a React component using Tailwind CSS that includes a task checklist, a progress bar, and a daily "Done" button with time-based locking.
+
+🎯 Features:
+
+Checklist of tasks:
+
+Display a list of 5 tasks with checkboxes like "Learn Web Development" etc.
+
+User can tick/untick each task.
+
+Tasks should be displayed using colors like blue, red, yellow, and green (each task can have a different border or background color for variety).
+
+Progress bar:
+
+A horizontal progress bar below the checklist.
+
+Represents progress over a 6-month period.
+
+Styled using Tailwind and can include multiple colors (e.g., gradient of blue/green/yellow based on percentage).
+
+"Done" button:
+
+Initially disabled.
+
+When all tasks are checked, it becomes enabled.
+
+On click:
+
+The progress bar should increase by a set percent (e.g., +5% per day).
+
+Below the progress bar, display a number starting from 1, then 2, etc., with a red ❌ cross next to it (to indicate that day is done and locked).
+
+Disable the "Done" button again.
+
+Button must remain disabled for 24 hours before becoming available again.
+
+Persistence:
+
+Use localStorage to:
+
+Save progress bar state.
+
+Save which tasks were completed for the day.
+
+Save the last time the "Done" button was clicked to calculate the 24-hour lock.
+
+Reset the checklist every day or after "Done" is clicked.
+
+🧰 Tech Stack:
+
+React (functional components + hooks)
+
+Tailwind CSS for styling
+
+Optional: use dayjs/date-fns or native Date for time calculations
