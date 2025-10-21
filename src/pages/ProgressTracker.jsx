@@ -6,11 +6,12 @@ const HALF_DAY_IN_MS = 12 * 60 * 60 * 1000;  // 12 hours instead of 24
 const PROGRESS_INCREMENT = 5; // Increase by 5% per day (20 days to reach 100%)
 
 const initialTasks = [
-    { id: 1, text: "3 Backend Videos", color: "border-blue-500 bg-blue-50", isChecked: false },
-    { id: 2, text: "Lead Generation Work", color: "border-red-500 bg-red-50", isChecked: false },
-    // { id: 3, text: "Uni Subject Information Security", color: "border-green-500 bg-green-50", isChecked: false },
-    // { id: 4, text: "FYP SRS", color: "border-yellow-500 bg-yellow-50", isChecked: false },
-    // { id: 5, text: "Lead Generation Work", color: "border-purple-500 bg-purple-50", isChecked: false },
+    { id: 1, text: "LinkedIn Post Backend Series", color: "border-blue-500 bg-blue-50", isChecked: false },
+    { id: 2, text: "Try Hack me Streak", color: "border-red-500 bg-red-50", isChecked: false },
+    { id: 3, text: "Research Paper PDC", color: "border-green-500 bg-green-50", isChecked: false },
+    { id: 4, text: "Fake News Detection", color: "border-yellow-500 bg-yellow-50", isChecked: false },
+    { id: 5, text: "Lead Generation Work", color: "border-purple-500 bg-purple-50", isChecked: false },
+    { id: 6, text: "English", color: "border-purple-500 bg-purple-50", isChecked: false },
 ];
 
 // Helper function to calculate time until unlock
